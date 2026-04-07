@@ -1,4 +1,4 @@
-# 🎯 SMVL — Hệ thống Nhận diện và Che mờ Logo Bản quyền trên Video Truyền hình
+# 🎯Hệ thống Nhận diện và Che mờ Logo Bản quyền trên Video Truyền hình
 
 > **Giải pháp AI tự động phát hiện, phân vùng và che mờ (pixelate) logo vi phạm bản quyền trong video phát sóng trực tiếp, sử dụng pipeline kết hợp YOLOv11 + SigLIP2 FAISS + SAM và YOLOv11-seg + SigLIP2.**
 
@@ -22,7 +22,7 @@
 
 ## 🔍 Tổng quan
 
-Trong bài toán xử lý video phát sóng (truyền hình thể thao, sự kiện trực tiếp), việc phát hiện và làm mờ chính xác logo các nhãn hàng vi phạm bản quyền là yêu cầu giám sát trọng yếu. Hệ thống SMVL giải quyết bài toán này bằng kiến trúc multi-stage:
+Trong bài toán xử lý video phát sóng (truyền hình thể thao, sự kiện trực tiếp), việc phát hiện và làm mờ chính xác logo các nhãn hàng vi phạm bản quyền là yêu cầu giám sát trọng yếu. Hệ thống giải quyết bài toán này bằng kiến trúc multi-stage:
 
 1. **YOLOv11** — Phát hiện vị trí logo (Bounding Box / Segmentation Mask)
 2. **SigLIP2 + FAISS** — Xác minh danh tính logo bằng vector embedding, loại bỏ false positive
