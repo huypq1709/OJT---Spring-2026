@@ -1,0 +1,96 @@
+# ===========================
+# SMVL .gitignore
+# ===========================
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+
+# === Virtual environments ===
+.venv/
+venv/
+env/
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# === Cache ===
+.cache/
+
+# === Training outputs (sinh ra khi huấn luyện) ===
+train_output/
+runs/
+yolo_seg_runs/
+smvl_yolo11s_seg_kaggle/
+
+# === Datasets (tải riêng từ Roboflow/Kaggle) ===
+SMVL_dataset/
+SMVL_dataset.zip
+cropped_classes/
+cropped_classes.zip
+dataset_yolo/
+dataset_train_yoloseg/
+dataset_embedding/
+
+# === SAM outputs ===
+SMVL_logo_seg_results_sam3b_yolo/
+SMVL_logo_seg_results_sam3b_yolo.zip
+output_segmented_masks/
+
+# === FAISS index (sinh từ Bước 4) ===
+logo_index.faiss
+logo_index.faiss.*
+logo_index_ivf.faiss
+logo_meta.npy
+logo_meta.npy.*
+
+# === Runtime outputs ===
+output/
+debug_crops/
+failed_crops/
+
+# === External datasets (không thuộc repo) ===
+lld/
+osld/
+logo-betting.v1i.coco/
+data logo/
+MobileSAM/
+sam2/
+sam3/
+sam3_weights/
+templates/
+sinh/
+docs/
+evidence/
+public/
+
+# === Model files NOT in weights/ ===
+*.engine
+*.onnx
+sam_b.pt
+sam2_*.pt
+sam3_b.pt
+best.pt
+yolo11n.pt
+yolo11n-seg.pt
+yolo11s-seg.pt
+yolov8s-worldv2.pt
+
+# === Large files ===
+*.zip
+
+# === Temp files ===
+*.xlsx
+*.pdf
+*.ipynb

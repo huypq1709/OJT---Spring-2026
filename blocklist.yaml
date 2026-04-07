@@ -1,0 +1,39 @@
+# Lọc bổ sung sau YOLO-seg: SigLIP2 embedding + FAISS (vector search)
+# Cần build index: python build_siglip_faiss_index.py --gallery_dir ... --class_id ...
+siglip_filter:
+  enabled: false
+  model: "google/siglip2-base-patch16-384"
+  weights: "siglip2_model.pt"
+  index_dir: "siglip_index"
+  min_area_ratio: 0.00001
+  max_area_ratio: 0.45
+  min_aspect: 0.05
+  max_aspect: 25.0
+  min_mask_fill_ratio: 0.08
+  min_yolo_conf: 0.22
+  min_faiss_score: 0.22
+  faiss_topk: 3
+  min_laplacian_var: 5.0
+  min_edge_density: 0.01
+
+blocklist:
+  enabled: true
+  classes:
+    # class_id mapping theo SMVL_JPEGImages/classes.txt
+    - id: 192
+      name: "fun88"
+      pixelate: true
+      pixel_size: 14
+    - id: 102
+      name: "sky_sports"
+      pixelate: true
+      pixel_size: 12
+    - id: 105
+      name: "1xbet"
+      pixelate: true
+      pixel_size: 14
+    - id: 59
+      name: "hyundai"
+      pixelate: true
+      pixel_size: 14
+
